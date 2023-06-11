@@ -1,0 +1,34 @@
+.home {
+  @extend %page;
+
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+
+  &--active {
+    @extend %page--active;
+  }
+}
+
+.home__wrapper {
+  height: auto;
+}
+
+// delete
+h2 {
+  font-size: 3rem;
+  width: 100vw;
+  height: 100vh;
+  @extend %center;
+  &:nth-child(even) {
+    background: #000;
+    color: #fff;
+  }
+  &:nth-child(odd) {
+    background: #fff;
+    color: #000;
+  }
+}
+a {
+  font-size: 2rem;
+  text-decoration: underline;
+  color: blue;
+}

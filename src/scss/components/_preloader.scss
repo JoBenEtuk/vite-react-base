@@ -1,0 +1,15 @@
+.preloader {
+	@extend %cover;
+	position: fixed;
+	z-index: z('preloader');
+	&__wrapper {
+		@extend %cover;
+		@extend %center;
+		background: #000;
+		color: #fff;
+
+		p {
+			font-size: 3rem;
+		}
+	}
+}

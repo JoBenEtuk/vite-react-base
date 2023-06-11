@@ -1,0 +1,29 @@
+%page {
+	@extend %cover;
+
+	opacity: 0;
+	visibility: hidden;
+	overflow: hidden;
+	z-index: z('content');
+
+	width: 100%;
+	height: 100vh;
+	object-fit: cover;
+	transition: opacity 0.5s, visibility 0.5s;
+	pointer-events: none;
+}
+
+%page--active {
+	position: unset;
+	opacity: 1;
+	visibility: visible;
+	overflow: unset;
+
+	pointer-events: auto;
+	height: unset;
+	transition: none;
+}
+
+%page__wrapper {
+	color: inherit;
+}
