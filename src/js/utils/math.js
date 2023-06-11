@@ -1,18 +1,12 @@
-export function lerp(p1, p2, t) {
-	return p1 + (p2 - p1) * t
-}
+export const lerp = (p1, p2, t) => p1 + (p2 - p1) * t
 
-export function interpolate(start, end, value) {
-	return start * (1.0 - value) + end * value
-}
+export const interpolate = (start, end, value) => start * (1.0 - value) + end * value
 
-export function clamp(min, max, number) {
-	return Math.max(min, Math.min(number, max))
-}
+export const clamp = (min, max, number) => Math.max(min, Math.min(number, max))
 
-export function random(min, max) {
-	return Math.random() * (max - min) + min
-}
+export const random = (min, max) => Math.random() * (max - min) + min
+
+export const distance = (x1, y1, x2, y2) => Math.hypot(x2 - x1, y2 - y1)
 
 export function mapRange(min, max, valueToMap, newMin, newMax) {
 	if (valueToMap <= min) {
@@ -32,6 +26,4 @@ export function mapRange(min, max, valueToMap, newMin, newMax) {
 	return percentage * newStep + newMin
 }
 
-export function toArray(nodelist) {
-	return Array.from(nodelist)
-}
+export const toArray = (nodelist) => Array.from(nodelist)
